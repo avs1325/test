@@ -30,7 +30,7 @@ function setup (){
 }
 
 function draw () {
-    background(255);
+    background(0, 255, 255);
     textSize(50)
 
     text("Speed should be entered in m/s.", 10 , 45)
