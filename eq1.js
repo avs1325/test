@@ -18,7 +18,7 @@ function setup (){
     vInput.position(displayWidth/2 - 50, displayHeight/2 - (displayHeight/16)*3);
     uInput.position(displayWidth/2 - 50, displayHeight/2 - (displayHeight/16)*2);
     tInput.position(displayWidth/2 - 50, displayHeight/2 - displayHeight/16);
-    calculateButton.position(displayWidth/2 + displayWidth/8, displayHeight/2 + displayHeight/8);
+    calculateButton.position(displayWidth-50, displayHeight- 25);
 
 
     vInput.size(100, 50);
