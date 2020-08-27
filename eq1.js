@@ -15,27 +15,27 @@ function setup (){
     tInput = createInput("Time");
     calculateButton = createButton("CALCULATE");
 
-    vInput.position(50, 280);
-    uInput.position(50, 340);
-    tInput.position(50, 400);
-    calculateButton.position(50,500);
+    vInput.position(displayWidth/2 - 100, displayHeight/10 * 4);
+    uInput.position(displayWidth/2 - 100, displayHeight/10 * 5);
+    tInput.position(displayWidth/2 - 100, displayHeight/10 * 6);
+    calculateButton.position(displayWidth/2 - 100, displayHeight/10 * 8);
 
 
-    vInput.size(100, 50);
-    uInput.size(100, 50);
-    tInput.size(100, 50);
+    vInput.size(200, 100);
+    uInput.size(200, 100);
+    tInput.size(200, 100);
 
-    calculateButton.size(100,50);
+    calculateButton.size(200,100);
     calculatePressed = "no";
 }
 
 function draw () {
     background(255);
-    textSize(20)
+    textSize(50)
 
-    text("Speed should be entered in m/s.", 10 , 20)
-    text("Time should be entered in s.", 10 , 40)
-    text("Acceleration will be returned in m/s/s.", 10 , 60)
+    text("Speed should be entered in m/s.", 10 , 45)
+    text("Time should be entered in s.", 10 , 90)
+    text("Acceleration will be returned in m/s/s.", 10 , 135)
 
     calculateButton.mousePressed(() => {
         v = vInput.value();
@@ -44,27 +44,19 @@ function draw () {
         calculatePressed = "yes";
     })
     if (calculatePressed == "yes"){
-        if (isNaN(v)) {
-            if (isNaN(u)) {
-                if (isNaN(t)) {
-                    text("Please enter numerical values", 10 , 100);
-                }
-            }
+        if (isNaN(v) || isNaN(u) || isNaN(t)) {
+            text("Please enter numerical values", 10 , 225);
         }
-        else {
-            if (!isNaN(u)) {
-                if (!isNaN(t)) {
-                    a = (v-u)/t;
-                    console.log(a)
-                    text("If you want to enter different data, enter it and press calculate", 10 , 100);
-                    text("Else, your current data is:", 10 , 120);
-                    text("Final velocity  : " + v + " m/s", 10 , 140);
-                    text("Initial velocity: " + u + " m/s", 10 , 160);
-                    text("Time: " + t + "s", 10 , 180);
-                    text("The equation being used is (v-u)/t", 10 , 200);
-                    text("The answer is " + a + " m/s/s", 10 , 220);
-                }
-            }
+        if (!isNaN(v) && !isNaN(u) && !isNaN(t)) {
+            a = (v-u)/t;
+            console.log(a)
+            text("If you want to enter different data, enter it and press calculate", 10 , 225);
+            text("Else, your current data is:", 10 , 270);
+            text("Final velocity  : " + v + " m/s", 10 , 315);
+            text("Initial velocity: " + u + " m/s", 10 , 360);
+            text("Time: " + t + "s", 10 , 405);
+            text("The equation being used is (v-u)/t", 10 , 450);
+            text("The answer is " + a + " m/s/s", 10 , 495);
         }
     }
 }
