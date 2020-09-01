@@ -9,21 +9,21 @@ var calculateButton, calculatePressed;
 
 
 function setup (){
-    createCanvas(displayWidth, displayHeight);
+    createCanvas(100, 250);
     vInput = createInput("Final Velocity");
     uInput = createInput("Initial Velocity");
     tInput = createInput("Time");
     calculateButton = createButton("CALCULATE");
 
-    vInput.position(displayWidth/2 - 100, displayHeight/10 * 4);
-    uInput.position(displayWidth/2 - 100, displayHeight/10 * 5);
-    tInput.position(displayWidth/2 - 100, displayHeight/10 * 6);
-    calculateButton.position(displayWidth/2 - 100, displayHeight/10 * 8);
+    vInput.position(0, 100);
+    uInput.position(0, 125);
+    tInput.position(0, 150);
+    calculateButton.position(0, 200);
 
 
-    vInput.size(200, 100);
-    uInput.size(200, 100);
-    tInput.size(200, 100);
+    vInput.size(100, 50);
+    uInput.size(100, 50);
+    tInput.size(100, 50);
 
     calculateButton.size(200,100);
     calculatePressed = "no";
@@ -31,11 +31,11 @@ function setup (){
 
 function draw () {
     background(0, 255, 255);
-    textSize(50)
+    textSize(10)
 
-    text("Speed should be entered in m/s.", 10 , 45)
-    text("Time should be entered in s.", 10 , 90)
-    text("Acceleration will be returned in m/s/s.", 10 , 135)
+    text("Speed should be entered in m/s.", 0 , 45)
+    text("Time should be entered in s.", 0 , 90)
+    text("Acceleration will be returned in m/s/s.", 0 , 135)
 
     calculateButton.mousePressed(() => {
         v = vInput.value();
