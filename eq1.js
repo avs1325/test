@@ -9,7 +9,7 @@ var calculateButton, calculatePressed;
 
 
 function setup (){
-    createCanvas(250, 600);
+    createCanvas(diplayWidth, diplayHeight);
     vInput = createInput("Final Velocity");
     uInput = createInput("Initial Velocity");
     tInput = createInput("Time");
