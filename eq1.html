@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>a = (v-u)/t</title>
+    </head>
+    <body>
+      <div class = text>
+        <h1>Acceleration = (Final velocity - Initial velocity) / Time</h1>
+        <p>This is the equation for you to solve your sum when you have only the values of time, final velocity and intitial velocity.</p>
+        <p>It is derived from the equation, Final velocity = Initial velocity + Acceleration * time</p>
+        <p>Please enter the values correctly in their SI units. To get the units <a href="https://www.nist.gov/pml/weights-and-measures/metric-si/si-units">click here</a>.</p>
+      </div>
+      <div class = Inputs>
+        <h2>Final Velocity</h2>
+        <input type="number" name="Final velocity" id="v">
+        <h2>Initial Velocity</h2>
+        <input type="number" name="Initial velocity" id="u">
+        <h2>Time</h2>
+        <input type="number" name="Time" id="t"> <br> <br> <br> <br> <br>
+        <button class="calculate" onclick="calculate()">Calculate</button>
+      </div>
+      <h1 id=ans></h1>
+      <script src="eq1.js"></script>
+    </body>
+  </html>
